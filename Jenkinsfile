@@ -1,5 +1,6 @@
 @Library('jenkins-shared-library@main') _
 env.COMPONENT='shipping'
+env.APP_TYPE='maven'
 maven()
 
 
