@@ -1,6 +1,6 @@
 module "immutable-app-ami" {
   source = "github.com/GurukaYadav/immutable-app-ami"
-  COMPONENT = "cart"
+  COMPONENT = "shipping"
   APP_VERSION = var.APP_VERSION
 }
 
@@ -13,7 +13,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "terraform-sfiles"
-    key    = "ami/cart/terraform.tfstate"
+    key    = "ami/shipping/terraform.tfstate"
     region = "us-east-1"
   }
 }
