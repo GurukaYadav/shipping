@@ -53,7 +53,7 @@ trigger:
 pool: slave
 
 variables:
-  COMPONENT: cart
+  COMPONENT: shipping
 
 resources:
   repositories:
@@ -64,4 +64,4 @@ resources:
 
 
 stages:
-  - template: nodejs.yml@templates
+  - template: maven.yml@templates
