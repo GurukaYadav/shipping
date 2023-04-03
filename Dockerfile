@@ -3,6 +3,6 @@ RUN adduser -D roboshop
 RUN mkdir /app
 WORKDIR /app
 COPY shipping.jar .
-chown roboshop /app
+RUN chown roboshop /app
 USER roboshop
 ENTRYPOINT ["java", "-jar", "shipping.jar"]
