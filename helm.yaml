@@ -1,1 +1,3 @@
 appName: shipping
+service:
+  targetPort: 8080
