@@ -1,3 +1,4 @@
 appName: shipping
 service:
+  type: ClusterIP
   targetPort: 8080
