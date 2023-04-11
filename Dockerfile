@@ -5,4 +5,4 @@ WORKDIR /app
 COPY shipping.jar .
 RUN chown roboshop:roboshop -R /app
 USER roboshop
-ENTRYPOINT ["java", "-jar", "shipping.jar"]
+ENTRYPOINT ["java",${MEM}, "-jar", "shipping.jar"]
