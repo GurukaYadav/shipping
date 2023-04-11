@@ -4,3 +4,10 @@ service:
   port: 8080
 ingress:
   enabled: false
+configMap:
+  enabled: true
+  data:
+    CART_ENDPOINT: cart
+    CART_PORT: "8080"
+    DB_HOST: roboshop-prod-rds-instance.czbojxmkvyqy.us-east-1.rds.amazonaws.com
+    MEM: 1024
