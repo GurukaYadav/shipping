@@ -7,7 +7,6 @@ ingress:
 configMap:
   enabled: true
   data:
-    CART_ENDPOINT: cart
-    CART_PORT: "8080"
+    CART_ENDPOINT: "cart:8080"
     DB_HOST: roboshop-prod-rds-instance.czbojxmkvyqy.us-east-1.rds.amazonaws.com
     MEM: "1024"
