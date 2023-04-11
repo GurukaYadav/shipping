@@ -4,6 +4,6 @@ RUN mkdir /app
 WORKDIR /app
 COPY shipping.jar .
 COPY run.sh /app
-RUN chown roboshop:roboshop -R /app
+RUN chown roboshop /app
 USER roboshop
 ENTRYPOINT ["sh","/app/run.sh"]
