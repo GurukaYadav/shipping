@@ -22,4 +22,4 @@ resources:
 hpa:
   min: 2
   max: 10
-  avgCpu: 50
+  cpuAvg: 50
