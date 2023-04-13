@@ -9,6 +9,17 @@ configMap:
   data:
     CART_ENDPOINT: "cart:8080"
     DB_HOST: roboshop-prod-rds-instance.czbojxmkvyqy.us-east-1.rds.amazonaws.com
-    MEM: "1024"
+    MEM: "3072"
 externalSecret:
   enabled: false
+resources:
+  requests:
+    memory: "3200Mi"
+    cpu: "1000m"
+  limits:
+    memory: "3500Mi"
+    cpu: "1500m"
+hpa:
+  min: 2
+  max: 10
+  avgCpu: 50
