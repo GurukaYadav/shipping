@@ -1,17 +1,22 @@
 appName: shipping
+
 service:
   type: ClusterIP
   port: 8080
+
 ingress:
   enabled: false
+
 configMap:
   enabled: true
   data:
     CART_ENDPOINT: "cart:8080"
     DB_HOST: roboshop-prod-rds-instance.czbojxmkvyqy.us-east-1.rds.amazonaws.com
     MEM: "3072"
+
 externalSecret:
   enabled: false
+
 resources:
   requests:
     memory: "3200Mi"
@@ -19,16 +24,20 @@ resources:
   limits:
     memory: "3500Mi"
     cpu: "1500m"
+
 hpa:
   min: 2
   max: 10
   cpuAvg: 50
+
 probes:
+  path: /health
+  port: 8080
   liveness:
-    port: 8080
     initialDelaySeconds: 5
     periodSeconds: 10
   readiness:
-    port: 8080
     initialDelaySeconds: 5
     periodSeconds: 10
+
+
