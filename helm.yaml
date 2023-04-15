@@ -31,7 +31,7 @@ hpa:
   cpuAvg: 50
 
 probes:
-  endpoint: /
+  endpoint: /health
   port: 8080
   liveness:
     initialDelaySeconds: 10
