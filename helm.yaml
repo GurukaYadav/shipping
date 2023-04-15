@@ -36,8 +36,10 @@ probes:
   liveness:
     initialDelaySeconds: 5
     periodSeconds: 10
+    timeoutSeconds: 30
   readiness:
-    initialDelaySeconds: 30
+    initialDelaySeconds: 5
     periodSeconds: 10
+    timeoutSeconds: 30
 
 
