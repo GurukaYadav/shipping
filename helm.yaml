@@ -30,17 +30,16 @@ hpa:
   max: 10
   cpuAvg: 50
 
-#As dispatch is not the application component, we are not using health checks for dispatch
-
-#probes:
-#  endpoint: /health
-#  port: 8080
-#  liveness:
-#    initialDelaySeconds: 10
-#    periodSeconds: 10
-#  readiness:
-#    initialDelaySeconds: 30
-#    periodSeconds: 10
+probes:
+  enabled: true
+  endpoint: /health
+  port: 8080
+  liveness:
+    initialDelaySeconds: 10
+    periodSeconds: 10
+  readiness:
+    initialDelaySeconds: 30
+    periodSeconds: 10
 
 
 
