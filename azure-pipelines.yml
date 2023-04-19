@@ -4,6 +4,8 @@
 trigger:
   branches:
     exclude: [ "main" ]
+# the above can also be written as below
+#    - main
   tags:
     include: [ "*" ]
 
